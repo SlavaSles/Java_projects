@@ -92,44 +92,44 @@ public class TableFilling {
         CriteriaQuery<User> userQuery = builder.createQuery(User.class);
         Root<User> root0 = userQuery.from(User.class);
         userQuery.select(root0);
-        ArrayList<User> UsersList = (ArrayList<User>) session.createQuery(userQuery).getResultList();
+        ArrayList<User> usersList = (ArrayList<User>) session.createQuery(userQuery).getResultList();
         Order[] orders = new Order[12];
         OtherOrder[] otherOrders = new OtherOrder[12];
         LocalDateTime regDate = LocalDateTime.of(LocalDate.of(2023, 01, 17), LocalTime.of(19, 15, 10));
-        orders[0] = new Order(UsersList.get(0), OrderStatus.NEW, regDate);
+        orders[0] = new Order(usersList.get(0), OrderStatus.NEW, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 02, 13), LocalTime.of(10, 45, 30));
-        orders[1] = new Order(UsersList.get(2), OrderStatus.CANCELLED, regDate);
+        orders[1] = new Order(usersList.get(2), OrderStatus.CANCELLED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 03, 7), LocalTime.of(19, 35, 30));
-        orders[2] = new Order(UsersList.get(1), OrderStatus.DELIVERED, regDate);
+        orders[2] = new Order(usersList.get(1), OrderStatus.DELIVERED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 02, 02), LocalTime.of(22, 45, 30));
-        orders[3] = new Order(UsersList.get(5), OrderStatus.PAYED, regDate);
+        orders[3] = new Order(usersList.get(5), OrderStatus.PAYED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 01, 30), LocalTime.of(15, 10, 30));
-        orders[4] = new Order(UsersList.get(6), OrderStatus.PACKED, regDate);
+        orders[4] = new Order(usersList.get(6), OrderStatus.PACKED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 02, 4), LocalTime.of(13, 40, 30));
-        orders[5] = new Order(UsersList.get(2), OrderStatus.NEW, regDate);
+        orders[5] = new Order(usersList.get(2), OrderStatus.NEW, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 01, 19), LocalTime.of(16, 5, 30));
-        orders[6] = new Order(UsersList.get(3), OrderStatus.CANCELLED, regDate);
+        orders[6] = new Order(usersList.get(3), OrderStatus.CANCELLED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 02, 27), LocalTime.of(8, 45, 30));
-        orders[7] = new Order(UsersList.get(5), OrderStatus.DELIVERED, regDate);
+        orders[7] = new Order(usersList.get(5), OrderStatus.DELIVERED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 03, 19), LocalTime.of(10, 25, 30));
-        orders[8] = new Order(UsersList.get(0), OrderStatus.PAYED, regDate);
+        orders[8] = new Order(usersList.get(0), OrderStatus.PAYED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 02, 18), LocalTime.of(20, 40, 30));
-        orders[9] = new Order(UsersList.get(1), OrderStatus.NEW, regDate);
+        orders[9] = new Order(usersList.get(1), OrderStatus.NEW, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 03, 03), LocalTime.of(10, 20, 15));
-        orders[10] = new Order(UsersList.get(2), OrderStatus.PACKED, regDate);
+        orders[10] = new Order(usersList.get(2), OrderStatus.PACKED, regDate);
 
         regDate = LocalDateTime.of(LocalDate.of(2023, 02, 14), LocalTime.of(12, 45, 00));
-        orders[11] = new Order(UsersList.get(6), OrderStatus.DELIVERED, regDate);
+        orders[11] = new Order(usersList.get(6), OrderStatus.DELIVERED, regDate);
 //        orders[11].setId(24);
 
         for (int i = 0; i < orders.length; i++) {
